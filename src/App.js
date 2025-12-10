@@ -9,13 +9,9 @@ export default function App() {
         <Weather defaultCity="New York" />
 
         <footer>
-          This project was coded by{" "}
-          <a href="https://www.delac.io/" target="_blank" rel="noreferrer">
-            Matt Delac
-          </a>{" "}
-          and is{" "}
+          This project was coded by Charllotte Blackwell-Maleshkov and is{" "}
           <a
-            href="https://github.com/wecodeschool/react-weather-app"
+            href="https://github.com/CharllieeBM/weather-forecast-react"
             target="_blank"
             rel="noreferrer"
           >
@@ -23,7 +19,7 @@ export default function App() {
           </a>{" "}
           and{" "}
           <a
-            href="https://suspicious-beaver-111c4d.netlify.com/"
+            href="weather-forecast-react2.netlify.app"
             target="_blank"
             rel="noreferrer"
           >
