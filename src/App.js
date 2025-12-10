@@ -3,6 +3,7 @@ import { getWeather, getForecast } from "./utils/api";
 import SearchBar from "./components/SearchBar";
 import CurrentWeather from "./components/CurrentWeather";
 import ForecastList from "./components/ForecastList";
+import { TailSpin } from "react-loader-spinner";
 
 export default function App() {
   let [city, setCity] = useState("");
@@ -17,7 +18,7 @@ export default function App() {
       let weatherData = await getWeather(searchCity);
       let forecastData = await getForecast(searchCity);
 
-      // Group forecast by day (API gives 3-hour intervals)
+      // Group forecast data by day (API returns 3-hour intervals)
       let dailyData = [];
       let seenDays = new Set();
       forecastData.list.forEach((item) => {
@@ -43,7 +44,16 @@ export default function App() {
       <h1>Weather Forecast</h1>
       <SearchBar onSearch={handleSearch} />
 
-      {loading && <p>Loading...</p>}
+      {loading && (
+        <div style={{ marginTop: "30px" }}>
+          <TailSpin
+            height="60"
+            width="60"
+            color="#007BFF"
+            ariaLabel="loading"
+          />
+        </div>
+      )}
 
       {weather && !loading && (
         <>
