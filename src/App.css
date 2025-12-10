@@ -1,38 +1,101 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, #d9e4f5, #f1f5ff);
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
+  margin-top: 40px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size: 2.2rem;
+  color: #222;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form {
+  margin-top: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  width: 220px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+button {
+  padding: 10px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007bff;
   color: white;
+  border: none;
+  border-radius: 6px;
+  transition: 0.2s ease;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #0056b3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.current-weather {
+  margin-top: 30px;
+  font-size: 16pt;
+  line-height: 1.6;
+}
+
+.current-weather img {
+  margin-top: 10px;
+}
+
+.forecast {
+  margin-top: 40px;
+}
+
+.forecast h2 {
+  font-size: 1.5rem;
+  color: #222;
+}
+
+.forecast-grid {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.forecast-day {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 15px;
+  width: 120px;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.forecast-day h3 {
+  margin: 0 0 5px;
+}
+
+.forecast-day img {
+  width: 60px;
+}
+
+.forecast-day p {
+  margin: 5px 0;
+  font-size: 14px;
 }
