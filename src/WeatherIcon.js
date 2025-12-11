@@ -21,7 +21,6 @@ export default function WeatherIcon(props) {
     "13n": "SNOW",
     "50d": "FOG",
     "50n": "FOG",
-
     "clear-sky-day": "CLEAR_DAY",
     "clear-sky-night": "CLEAR_NIGHT",
     "few-clouds-day": "PARTLY_CLOUDY_DAY",
