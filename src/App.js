@@ -8,7 +8,7 @@ export default function App() {
       <div className="container">
         {" "}
         <h2>Weather Forecast</h2>
-        <Weather defaultCity="New York" />
+        <Weather defaultCity="Toronto" />
         <footer>
           This project was coded by Charllotte Blackwell-Maleshkov and is{" "}
           <a
