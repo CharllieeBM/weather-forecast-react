@@ -3,6 +3,11 @@
   margin: 30px auto;
 }
 
+.App h2 {
+  text-align: center;
+  margin-top: 30px;
+}
+
 .App footer {
   font-size: 11px;
   margin: 10px 0;
