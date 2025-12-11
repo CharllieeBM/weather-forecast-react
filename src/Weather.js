@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import WeatherInfo from "./WeatherInfo";
+import WeatherInput from "./WeatherInput";
 import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
 import "./Weather.css";
@@ -12,13 +12,15 @@ export default function Weather(props) {
     setWeatherData({
       ready: true,
       coord: response.data.coord,
-      temperature: response.data.main.temp,
-      humidity: response.data.main.humidity,
-      date: new Date(response.data.dt * 1000),
+      temperature: Math.round(response.data.main.temp),
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
       wind: response.data.wind.speed,
       city: response.data.name,
+      humidity: response.data.main.humidity,
+      precipitation:
+        response.data.rain?.["1h"] || response.data.snow?.["1h"] || 0,
+      date: new Date(response.data.dt * 1000),
     });
   }
 
@@ -60,7 +62,7 @@ export default function Weather(props) {
             </div>
           </div>
         </form>
-        <WeatherInfo data={weatherData} />
+        <WeatherInput data={weatherData} />
         <WeatherForecast />
       </div>
     );

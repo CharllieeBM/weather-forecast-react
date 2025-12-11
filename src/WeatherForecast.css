@@ -6,3 +6,9 @@
   opacity: 0.6;
   margin-left: 5px;
 }
+
+.WeatherForecast canvas {
+  width: 35px !important;
+  height: 35px !important;
+  margin: 10px auto;
+}
