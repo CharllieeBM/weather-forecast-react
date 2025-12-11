@@ -52,3 +52,34 @@
   line-height: 1;
   top: -34px;
 }
+
+/* --- Media Queries for Smaller Screens (e.g., Mobile Phones) --- */
+
+@media (max-width: 576px) {
+  .Weather {
+    padding: 10px;
+  }
+
+  .Weather h1 {
+    font-size: 20px;
+  }
+
+  .Weather .clearfix {
+    align-items: flex-start;
+  }
+
+  .Weather .clearfix canvas {
+    margin-right: 0;
+  }
+
+  .Weather .temperature {
+    font-size: 50px;
+    line-height: 50px;
+    margin-left: 0;
+  }
+
+  .Weather .unit {
+    top: -25px;
+    font-size: 14px;
+  }
+}
